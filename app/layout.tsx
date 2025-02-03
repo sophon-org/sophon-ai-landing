@@ -5,7 +5,7 @@ import './globals.css';
 import type {Metadata} from 'next';
 import type {ReactElement} from 'react';
 
-export const altehaasGrotesk = localFont({
+const altehaasGrotesk = localFont({
 	variable: '--font-altehaasgrotesk',
 	src: [
 		{
