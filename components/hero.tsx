@@ -8,7 +8,7 @@ export default function Hero(): ReactElement {
 	return (
 		<section
 			className={cn(
-				'relative flex w-full items-center justify-center rounded-lg',
+				'relative flex w-full items-center justify-center rounded-3xl md:rounded-lg',
 				'bg-cover bg-center',
 				'bg-[url("/hero-mobile.jpg")] md:bg-[url("/hero.jpg")]',
 				'aspect-[359/663] md:aspect-[1904/828]'

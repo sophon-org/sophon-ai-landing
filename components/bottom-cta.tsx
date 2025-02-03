@@ -7,7 +7,7 @@ export default function BottomCTA(): ReactElement {
 		<section className={'mx-auto max-w-[1200px] pt-[160px] md:pt-[200px]'}>
 			<div
 				className={cn(
-					'relative flex items-center justify-center overflow-hidden rounded-[32px] text-white',
+					'relative flex items-center justify-center overflow-hidden rounded-3xl md:rounded-[32px] text-white',
 					'aspect-[359/560] md:aspect-[1200/520]'
 				)}>
 				<div
