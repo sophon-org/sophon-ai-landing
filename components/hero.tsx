@@ -1,6 +1,6 @@
 import {cn} from '@/lib/utils';
 
-import {Logo} from './ui/logo';
+import {Logo} from './logo';
 
 import type {ReactElement} from 'react';
 
