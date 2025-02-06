@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import {cn} from '@/lib/utils';
 
 import type {ReactElement} from 'react';
@@ -25,7 +27,7 @@ function ArrowIcon(): ReactElement {
 					width={'18'}
 					height={'18'}
 					transform={'rotate(-180 18 18)'}
-					fill={'currentColor'}
+					fill={'#000000'}
 				/>
 			</mask>
 			<g mask={'url(#mask0_60_430)'}>
@@ -40,43 +42,46 @@ function ArrowIcon(): ReactElement {
 	);
 }
 
-function PartnerCardBig(): ReactElement {
+function PartnerCardBig({logoURI}: {logoURI: string}): ReactElement {
 	return (
 		<div
 			className={cn(
-				'space-y-4 rounded-lg bg-grey p-6 row-span-2 flex flex-col justify-between',
-				'aspect-[327/360] md:aspect-auto'
+				'space-y-4 rounded-lg bg-grey p-6 flex flex-col',
+				'aspect-[327/360] md:aspect-[440/656] w-full md:w-[440px] md:min-w-[440px]'
 			)}>
 			<div className={'flex justify-end'}>
-				<div className={'flex size-[120px] items-center justify-center rounded-lg bg-black'}>
-					<svg
-						className={'size-[60px] text-white'}
-						viewBox={'0 0 24 24'}>
-						<circle
-							cx={'12'}
-							cy={'12'}
-							r={'8'}
-							stroke={'currentColor'}
-							fill={'none'}
-							strokeWidth={'2'}
-						/>
-					</svg>
+				<div className={'flex size-[120px] items-center justify-center rounded-[24px]'}>
+					<Image
+						src={logoURI}
+						alt={'Cod3x'}
+						width={120}
+						height={120}
+						className={'object-contain'}
+					/>
 				</div>
 			</div>
-			<div className={'mt-auto'}>
+			<div className={'pt-[42px]'}>
 				<p
 					className={cn(
 						'font-bold tracking-[-0.06em] text-black',
 						'md:text-[36px] md:leading-[36px]',
 						'text-[24px] leading-[24px]'
 					)}>
-					{'App Name'}
+					{'Cod3x'}
 				</p>
-				<p className={'mt-4 text-[14px] leading-[14px] tracking-[-0.03rem] text-black/30'}>
-					{'Description text example text example in several lines text example in several lines'}
+				<p
+					className={
+						'mt-4 whitespace-break-spaces text-[20px] leading-[24px] tracking-[-0.04rem] text-black/30'
+					}>
+					{
+						'Cod3x makes it easy to launch personalized AI agents to execute financial tasks on blockchain — no code required.\n\nAs this network grows on Sophon, it will expand beyond DeFi into gaming, social interactions, and new forms of entertainment.'
+					}
 				</p>
-				<div className={'mt-8 flex items-center gap-x-0.5 text-blue md:text-black/10'}>
-					<b className={'text-[16px] font-bold leading-[16px] tracking-[-0.03rem]'}>{'Read more'}</b>
+				<div
+					className={
+						'mt-8 flex cursor-pointer items-center gap-x-0.5 text-black/10 transition-colors hover:text-blue'
+					}>
+					<b className={'text-[16px] font-bold leading-[16px] tracking-[-0.03rem]'}>{'Learn more on X'}</b>
 					<ArrowIcon />
 				</div>
 			</div>
@@ -84,35 +89,33 @@ function PartnerCardBig(): ReactElement {
 	);
 }
 
-function PartnerCardSmall(): ReactElement {
+function PartnerCardSmall(props: {title: string; description: string; logoURI: string}): ReactElement {
+	const {title, description, logoURI} = props;
+
 	return (
 		<div className={cn('space-y-4 rounded-lg bg-grey p-6 flex flex-col justify-between')}>
-			<div className={'flex justify-between gap-4 md:gap-16'}>
-				<div className={'mt-auto'}>
+			<div className={'flex flex-col'}>
+				<div className={'flex flex-row items-center justify-between'}>
 					<p className={cn('font-bold tracking-[-0.06em] text-black', 'text-[24px] leading-[24px]')}>
-						{'App Name'}
+						{title}
 					</p>
-					<p className={'mt-4 text-[14px] leading-[14px] tracking-[-0.03rem] text-black/30'}>
-						{'Description text example text example in several lines text example in several lines'}
-					</p>
-					<div className={'mt-8 flex items-center gap-x-0.5 text-blue md:text-black/10'}>
-						<b className={'text-[16px] font-bold leading-[16px] tracking-[-0.03rem]'}>{'Read more'}</b>
-						<ArrowIcon />
+					<div className={'aspect-square size-[40px] rounded-[12px]'}>
+						<Image
+							src={logoURI}
+							alt={title}
+							width={40}
+							height={40}
+							className={'rounded-[12px] object-cover'}
+						/>
 					</div>
 				</div>
-				<div className={'flex aspect-square size-[80px] items-center justify-center rounded-lg bg-black'}>
-					<svg
-						className={'size-[40px] text-white'}
-						viewBox={'0 0 24 24'}>
-						<circle
-							cx={'12'}
-							cy={'12'}
-							r={'8'}
-							stroke={'currentColor'}
-							fill={'none'}
-							strokeWidth={'2'}
-						/>
-					</svg>
+				<p className={'mt-3 text-[14px] leading-[18px] tracking-[-0.03rem] text-black/30'}>{description}</p>
+				<div
+					className={
+						'mt-9 flex cursor-pointer items-center gap-x-0.5 text-black/10 transition-colors hover:text-blue'
+					}>
+					<b className={'text-[16px] font-bold leading-[16px] tracking-[-0.03rem]'}>{'Learn more on X'}</b>
+					<ArrowIcon />
 				</div>
 			</div>
 		</div>
@@ -122,21 +125,54 @@ function PartnerCardSmall(): ReactElement {
 export default function Partners(): ReactElement {
 	return (
 		<section className={'mx-auto max-w-[1200px] pt-[160px] md:pt-[200px]'}>
-			<div className={'container mx-auto'}>
+			<div className={'mx-auto'}>
 				<h2
 					className={cn(
 						'mx-auto text-center -tracking-wider text-black',
 						'md:text-[76px] md:leading-[76px]',
 						'text-[40px] leading-[38px]'
 					)}>
-					{'Join the best.'}
+					{'A Growing AI Ecosystem.'}
 				</h2>
-				<div className={'grid grid-cols-1 gap-4 pt-10 md:grid-cols-3 md:pt-[49px]'}>
-					<PartnerCardBig />
-					<PartnerCardSmall />
-					<PartnerCardSmall />
-					<PartnerCardSmall />
-					<PartnerCardSmall />
+				<div className={'flex flex-col gap-4 pt-10 md:flex-row md:pt-[49px]'}>
+					<PartnerCardBig logoURI={'/partners/codex.png'} />
+					<div className={'grid-col-1 grid gap-4 md:grid-cols-2'}>
+						<PartnerCardSmall
+							title={'Anomaly'}
+							logoURI={'/partners/anomaly.png'}
+							description={
+								'The creators of Nova — an Agentic World Builder that drives AI-powered gaming, trading, and social ecosystems. Leveraging AI to redefine AI-driven storytelling and interactive gameplay.'
+							}
+						/>
+						<PartnerCardSmall
+							title={'Scoreplay'}
+							logoURI={'/partners/scoreplay.png'}
+							description={
+								'Improving sports prediction markets with Crypto x AI — already serving 10,000+ users on testnet with 68% retention.'
+							}
+						/>
+						<PartnerCardSmall
+							title={'SPHNX'}
+							logoURI={'/partners/sphnx.png'}
+							description={
+								'SPHNX is a modular benchmark suite designed to evaluate and enhance the privacy management capabilities of LLM-based multi-agent systems.'
+							}
+						/>
+						<PartnerCardSmall
+							title={'Aethir'}
+							logoURI={'/partners/aethir.png'}
+							description={
+								'Aethir powers Sophon’s AI ecosystem with 3,000+ NVIDIA H100 GPUs and 43,000+ additional high-performance GPUs, providing the scalable, decentralized compute needed for advanced AI apps.'
+							}
+						/>
+						<PartnerCardSmall
+							title={'Beam'}
+							logoURI={'/partners/beam.png'}
+							description={
+								'BeamAI, led by an Oxford-trained AI researcher, pioneers innovations like lifelike NPCs, procedural world generation, and advanced player behavior analysis.'
+							}
+						/>
+					</div>
 				</div>
 			</div>
 		</section>

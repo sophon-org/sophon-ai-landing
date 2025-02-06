@@ -20,30 +20,26 @@ export default function Hero(): ReactElement {
 				<h1
 					className={cn(
 						'font-bold -tracking-wider text-white',
-						'md:text-[39px] md:leading-[39px]',
-						'text-[24px] leading-[24px]'
+						'md:text-[72px] md:leading-[60px]',
+						'text-[48px] leading-[48px]',
+						'whitespace-break-spaces'
 					)}>
-					{'JOIN SOPHON'}
-					<span
-						className={cn(
-							'block pt-1 -tracking-wider',
-							'md:text-[71px] md:leading-[71px]',
-							'text-[48px] leading-[48px]'
-						)}>
-						{'(AI PROGRAM)'}
-					</span>
+					{'Sophon\nIntelligence\nAgency'}
+					<span className={cn('block pt-1 -tracking-wider', 'text-[24px] leading-[24px]')}>{'( SIA )'}</span>
 				</h1>
 				<p
 					className={cn(
-						'mx-auto uppercase -tracking-wider text-white',
+						'mx-auto uppercase text-white pt-3',
 						'max-w-sm md:max-w-[560px]',
-						'md:text-[31px] md:leading-[28px]',
-						'text-[24px] leading-[22px]'
+						'md:text-[26px] md:leading-[26px] md:-tracking-wider',
+						'text-[16px] leading-[18px] -tracking-[-0.02em]'
 					)}>
-					{'Example text description in several lines text description in several lines Example text'}
+					{
+						'Bring autonomous AI agents to life with funding, GPU credits, and the infrastructure to scale – on the user-centric chain.'
+					}
 				</p>
 				<div className={'flex flex-col justify-center gap-4 md:flex-row'}>
-					<button className={'button-regular'}>{'Apply now'}</button>
+					<button className={'button-regular'}>{'Chat on Telegram'}</button>
 					<button className={'button-glass'}>{'Learn more'}</button>
 				</div>
 			</div>

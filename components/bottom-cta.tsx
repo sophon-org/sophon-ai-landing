@@ -8,7 +8,7 @@ export default function BottomCTA(): ReactElement {
 			<div
 				className={cn(
 					'relative flex items-center justify-center overflow-hidden rounded-3xl md:rounded-[32px] text-white',
-					'aspect-[359/560] md:aspect-[1200/520]'
+					'aspect-[359/560] md:aspect-[1200/683]'
 				)}>
 				<div
 					className={cn(
@@ -16,35 +16,47 @@ export default function BottomCTA(): ReactElement {
 						'bg-[url("/banner-mobile.jpg")] md:bg-[url("/banner.jpg")]'
 					)}
 				/>
-				<div className={'relative z-10 space-y-10 px-4 text-center'}>
+				<div className={'relative z-10 px-4 text-center'}>
 					<h2
 						className={cn(
-							'font-bold -tracking-wider text-white',
-							'md:text-[39px] md:leading-[39px]',
-							'text-[24px] leading-[24px]'
+							'block -tracking-wider',
+							'md:text-[71px] md:leading-[71px]',
+							'text-[48px] leading-[48px]',
+							'uppercase font-bold'
 						)}>
-						{'JOIN SOPHON'}
-						<span
-							className={cn(
-								'block pt-1 -tracking-wider',
-								'md:text-[71px] md:leading-[71px]',
-								'text-[48px] leading-[48px]'
-							)}>
-							{'(AI PROGRAM)'}
-						</span>
+						{'Join the SIA'}
 					</h2>
 					<p
 						className={cn(
-							'mx-auto tracking-[-0.02em] text-center text-white',
-							'max-w-[720px]',
-							'md:text-[26px] md:leading-[28px]',
+							'block font-bold uppercase pt-4 -tracking-wider',
+							'md:text-[24px] md:leading-[24px]',
+							'text-[16px] leading-[16px]'
+						)}>
+						{'We bring together elite teams building practical, consumer-facing AI-powered applications.'}
+					</p>
+					<p
+						className={cn(
+							'mx-auto pt-[50px] md:pt-10 text-center text-white',
+							'max-w-[720px] w-full tracking-[-0.02em]',
+							'md:text-[24px] md:leading-[24px]',
 							'text-[16px] leading-[18px]'
 						)}>
 						{
-							'Introducing a new era of on-chain crypto culture, entertainment, and community. Empowering creators and developers with blockchain.'
+							'As more curated products roll out in Q1 2025 and beyond, expect the agentic economy on Sophon to grow in ways few other chains can match.'
 						}
 					</p>
-					<div className={'flex items-center justify-center'}>
+					<p
+						className={cn(
+							'mx-auto pt-10 text-center text-white',
+							'max-w-[720px] w-full tracking-[-0.02em]',
+							'md:text-[24px] md:leading-[24px]',
+							'text-[16px] leading-[18px]'
+						)}>
+						{
+							'We invite you – builders, creators, and forward-thinkers – to join us and help define the next era of blockchain-powered entertainment, gaming, and finance.'
+						}
+					</p>
+					<div className={'flex items-center justify-center pt-10'}>
 						<button className={'button-regular min-w-[240px]'}>{'Apply now'}</button>
 					</div>
 				</div>
