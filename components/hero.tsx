@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import {cn} from '@/lib/utils';
 
 import {Logo} from './logo';
@@ -11,7 +13,7 @@ export default function Hero(): ReactElement {
 				'relative flex w-full items-center justify-center rounded-3xl md:rounded-lg',
 				'bg-cover bg-center',
 				'bg-[url("/hero-mobile.jpg")] md:bg-[url("/hero.jpg")]',
-				'aspect-[359/663] md:aspect-[1904/828]'
+				'aspect-[359/663] md:aspect-[1904/828] md:min-h-[620px]'
 			)}>
 			<div className={'absolute inset-x-0 top-[32px] flex justify-center'}>
 				<Logo className={'text-white'} />
@@ -22,7 +24,7 @@ export default function Hero(): ReactElement {
 						'font-bold -tracking-wider text-white',
 						'md:text-[72px] md:leading-[60px]',
 						'text-[48px] leading-[48px]',
-						'whitespace-break-spaces'
+						'whitespace-break-spaces uppercase'
 					)}>
 					{'Sophon\nIntelligence\nAgency'}
 					<span className={cn('block pt-1 -tracking-wider', 'text-[24px] leading-[24px]')}>{'( SIA )'}</span>
@@ -40,7 +42,11 @@ export default function Hero(): ReactElement {
 				</p>
 				<div className={'flex flex-col justify-center gap-4 md:flex-row'}>
 					<button className={'button-regular'}>{'Chat on Telegram'}</button>
-					<button className={'button-glass'}>{'Learn more'}</button>
+					<Link
+						href={'https://blog.sophon.xyz/'}
+						target={'_blank'}>
+						<button className={'button-glass'}>{'Learn more'}</button>
+					</Link>
 				</div>
 			</div>
 		</section>

@@ -8,7 +8,7 @@ export default function BottomCTA(): ReactElement {
 			<div
 				className={cn(
 					'relative flex items-center justify-center overflow-hidden rounded-3xl md:rounded-[32px] text-white',
-					'aspect-[359/560] md:aspect-[1200/683]'
+					'max-sm:aspect-[359/560] md:w-full md:max-w-[1200px] md:min-h-[683px] h-auto'
 				)}>
 				<div
 					className={cn(
@@ -16,7 +16,7 @@ export default function BottomCTA(): ReactElement {
 						'bg-[url("/banner-mobile.jpg")] md:bg-[url("/banner.jpg")]'
 					)}
 				/>
-				<div className={'relative z-10 px-4 text-center'}>
+				<div className={'relative z-10 p-4 text-center'}>
 					<h2
 						className={cn(
 							'block -tracking-wider',

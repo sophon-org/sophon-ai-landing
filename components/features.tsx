@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import {cn} from '@/lib/utils';
 
@@ -77,7 +78,11 @@ function FundingCard(): ReactElement {
 								'In partnership with Cod3x, this initiative will launch a ‘Giga Swarm’ of productive AI agents on Sophon.'
 							}
 						</CardDescription>
-						<button className={'button-regular whitespace-nowrap'}>{'Read more'}</button>
+						<Link
+							href={'https://blog.sophon.xyz/'}
+							target={'_blank'}>
+							<button className={'button-regular whitespace-nowrap'}>{'Read more'}</button>
+						</Link>
 					</div>
 				</div>
 			</div>
