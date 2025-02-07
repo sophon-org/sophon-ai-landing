@@ -50,7 +50,7 @@ function PartnerCardBig(props: {logoURI: string; href: string}): ReactElement {
 		<div
 			className={cn(
 				'space-y-4 rounded-lg bg-grey p-6 flex flex-col',
-				'aspect-[327/360] w-full max-md:w-[440px] max-md:min-w-[440px] md:aspect-auto'
+				'aspect-[327/360] w-full md:w-[440px] md:min-w-[440px] md:aspect-auto'
 			)}>
 			<div className={'flex justify-end'}>
 				<div className={'flex size-[120px] items-center justify-center rounded-[24px]'}>

@@ -13,7 +13,7 @@ export default function Hero(): ReactElement {
 				'relative flex w-full items-center justify-center rounded-3xl md:rounded-lg',
 				'bg-cover bg-center',
 				'bg-[url("/hero-mobile.jpg")] md:bg-[url("/hero.jpg")]',
-				'aspect-[359/663] md:aspect-[1904/828] md:min-h-[620px]'
+				'aspect-[359/663] w-full md:aspect-[1904/828] md:min-h-[620px]'
 			)}>
 			<div className={'absolute inset-x-0 top-[32px] flex justify-center'}>
 				<Logo className={'text-white'} />
