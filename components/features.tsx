@@ -33,10 +33,13 @@ function CardDescription(props: {children: ReactNode}): ReactElement {
 
 function FundingCard(): ReactElement {
 	return (
-		<div
-			className={
-				'relative col-span-1 row-span-2 h-[360px] overflow-hidden rounded-3xl bg-grey md:aspect-[592/640] md:h-auto'
-			}>
+		<Link
+			href={'https://blog.sophon.xyz/'}
+			target={'_blank'}
+			className={cn(
+				'relative col-span-1 row-span-2 h-[360px] overflow-hidden rounded-3xl md:aspect-[592/640] md:h-auto',
+				'bg-grey hover:bg-gradient-to-b from-[#F9FBFB] to-[#EDF6FB] transition-colors'
+			)}>
 			<div className={'absolute inset-y-[40px] right-[-72px] md:right-[-288px] md:top-[-120px]'}>
 				<Image
 					src={'/featureCircle.png'}
@@ -78,15 +81,11 @@ function FundingCard(): ReactElement {
 							<b>{'‘Giga Swarm’'}</b>
 							{' of productive AI agents on Sophon.'}
 						</CardDescription>
-						<Link
-							href={'https://blog.sophon.xyz/'}
-							target={'_blank'}>
-							<button className={'button-regular whitespace-nowrap'}>{'Read more'}</button>
-						</Link>
+						<button className={'button-regular whitespace-nowrap'}>{'Read more'}</button>
 					</div>
 				</div>
 			</div>
-		</div>
+		</Link>
 	);
 }
 

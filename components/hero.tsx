@@ -44,8 +44,9 @@ export default function Hero(): ReactElement {
 					<button className={'button-regular'}>{'Chat on Telegram'}</button>
 					<Link
 						href={'https://blog.sophon.xyz/'}
-						target={'_blank'}>
-						<button className={'button-glass'}>{'Learn more'}</button>
+						target={'_blank'}
+						className={'flex w-full'}>
+						<button className={'button-glass w-full'}>{'Learn more'}</button>
 					</Link>
 				</div>
 			</div>

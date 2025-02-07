@@ -48,12 +48,16 @@ function PartnerCardBig(props: {logoURI: string; href: string}): ReactElement {
 	const {logoURI, href} = props;
 
 	return (
-		<div
+		<Link
+			href={href}
+			target={'_blank'}
 			className={cn(
-				'space-y-4 rounded-lg bg-grey p-6 flex flex-col',
+				'group transition-colors',
+				'space-y-4 rounded-lg p-6 flex flex-col',
+				'bg-grey hover:bg-gradient-to-b from-[#F9FBFB] to-[#EDF6FB]',
 				'aspect-[327/360] w-full md:w-[440px] md:min-w-[440px] md:aspect-auto'
 			)}>
-			<div className={'flex justify-end'}>
+			<div className={'flex h-full justify-end'}>
 				<div className={'flex size-[120px] items-center justify-center rounded-[24px]'}>
 					<Image
 						src={logoURI}
@@ -64,7 +68,7 @@ function PartnerCardBig(props: {logoURI: string; href: string}): ReactElement {
 					/>
 				</div>
 			</div>
-			<div className={'pt-[42px]'}>
+			<div className={'mt-auto'}>
 				<p
 					className={cn(
 						'font-bold tracking-[-0.06em] text-black',
@@ -81,21 +85,15 @@ function PartnerCardBig(props: {logoURI: string; href: string}): ReactElement {
 						'Cod3x makes it easy to launch personalized AI agents to execute financial tasks on blockchain — no code required.\n\nAs this network grows on Sophon, it will expand beyond DeFi into gaming, social interactions, and new forms of entertainment.'
 					}
 				</p>
-				<Link
-					href={href}
-					target={'_blank'}>
-					<div
-						className={
-							'mt-8 flex cursor-pointer items-center gap-x-0.5 text-black/10 transition-colors hover:text-blue'
-						}>
-						<b className={'text-[16px] font-bold leading-[16px] tracking-[-0.03rem]'}>
-							{'Learn more on X'}
-						</b>
-						<ArrowIcon />
-					</div>
-				</Link>
+				<div
+					className={
+						'mt-8 flex cursor-pointer items-center gap-x-0.5 text-blue transition-colors group-hover:text-blue md:text-black/10'
+					}>
+					<b className={'text-[16px] font-bold leading-[16px] tracking-[-0.03rem]'}>{'Learn more on X'}</b>
+					<ArrowIcon />
+				</div>
 			</div>
-		</div>
+		</Link>
 	);
 }
 
@@ -103,7 +101,14 @@ function PartnerCardSmall(props: {title: string; description: ReactNode; logoURI
 	const {title, description, logoURI, href} = props;
 
 	return (
-		<div className={cn('space-y-4 rounded-lg bg-grey p-6 flex flex-col justify-between')}>
+		<Link
+			href={href}
+			target={'_blank'}
+			className={cn(
+				'group',
+				'space-y-4 rounded-lg p-6 flex flex-col justify-between transition-colors',
+				'bg-grey hover:bg-gradient-to-b from-[#F9FBFB] to-[#EDF6FB]'
+			)}>
 			<div className={'flex flex-col'}>
 				<div className={'flex flex-row items-center justify-between'}>
 					<p className={cn('font-bold tracking-[-0.06em] text-black', 'text-[24px] leading-[24px]')}>
@@ -120,21 +125,16 @@ function PartnerCardSmall(props: {title: string; description: ReactNode; logoURI
 					</div>
 				</div>
 				<p className={'mt-3 text-[14px] leading-[18px] tracking-[-0.03rem] text-black/30'}>{description}</p>
-				<Link
-					href={href}
-					target={'_blank'}>
-					<div
-						className={
-							'mt-9 flex cursor-pointer items-center gap-x-0.5 text-black/10 transition-colors hover:text-blue'
-						}>
-						<b className={'text-[16px] font-bold leading-[16px] tracking-[-0.03rem]'}>
-							{'Learn more on X'}
-						</b>
-						<ArrowIcon />
-					</div>
-				</Link>
+
+				<div
+					className={
+						'mt-9 flex cursor-pointer items-center gap-x-0.5 text-blue transition-colors group-hover:text-blue md:text-black/10'
+					}>
+					<b className={'text-[16px] font-bold leading-[16px] tracking-[-0.03rem]'}>{'Learn more on X'}</b>
+					<ArrowIcon />
+				</div>
 			</div>
-		</div>
+		</Link>
 	);
 }
 
