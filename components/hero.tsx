@@ -32,12 +32,12 @@ export default function Hero(): ReactElement {
 				<p
 					className={cn(
 						'mx-auto uppercase text-white pt-3',
-						'max-w-sm md:max-w-[560px]',
+						'max-w-sm md:max-w-[560px] whitespace-break-spaces',
 						'md:text-[26px] md:leading-[26px] md:-tracking-wider',
 						'text-[16px] leading-[18px] -tracking-[-0.02em]'
 					)}>
 					{
-						'Bring autonomous AI agents to life with funding, GPU credits, and the infrastructure to scale – on the user-centric chain.'
+						'Bring autonomous AI agents to life with funding, GPU credits, and the infrastructure to scale – on the\nuser-centric chain.'
 					}
 				</p>
 				<div className={'flex flex-col justify-center gap-4 md:flex-row'}>
