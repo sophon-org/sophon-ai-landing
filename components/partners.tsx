@@ -53,7 +53,7 @@ function PartnerCardBig(props: {logoURI: string; href: string}): ReactElement {
 			target={'_blank'}
 			className={cn(
 				'group transition-colors',
-				'space-y-4 rounded-lg p-6 flex flex-col',
+				'space-y-4 rounded-3xl p-6 flex flex-col',
 				'bg-grey hover:bg-gradient-to-b from-[#F9FBFB] to-[#EDF6FB]',
 				'aspect-[327/360] w-full md:w-[440px] md:min-w-[440px] md:aspect-auto'
 			)}>

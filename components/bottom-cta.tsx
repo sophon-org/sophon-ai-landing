@@ -30,7 +30,8 @@ export default function BottomCTA(): ReactElement {
 						className={cn(
 							'block font-bold uppercase pt-4 -tracking-wider',
 							'md:text-[24px] md:leading-[24px]',
-							'text-[16px] leading-[16px]'
+							'text-[16px] leading-[16px]',
+							'max-w-[720px] w-full'
 						)}>
 						{'We bring together elite teams building practical, consumer-facing AI-powered applications.'}
 					</p>
