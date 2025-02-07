@@ -45,7 +45,7 @@ export default function Hero(): ReactElement {
 					<Link
 						href={'https://blog.sophon.xyz/'}
 						target={'_blank'}
-						className={'flex w-full'}>
+						className={'flex max-md:w-full'}>
 						<button className={'button-glass w-full'}>{'Learn more'}</button>
 					</Link>
 				</div>
