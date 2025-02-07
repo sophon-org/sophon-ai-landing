@@ -106,7 +106,7 @@ function PartnerCardSmall(props: {title: string; description: ReactNode; logoURI
 			target={'_blank'}
 			className={cn(
 				'group',
-				'space-y-4 rounded-lg p-6 flex flex-col justify-between transition-colors',
+				'space-y-4 rounded-3xl p-6 flex flex-col justify-between transition-colors',
 				'bg-grey hover:bg-gradient-to-b from-[#F9FBFB] to-[#EDF6FB]'
 			)}>
 			<div className={'flex flex-col'}>
