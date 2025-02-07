@@ -74,9 +74,9 @@ function FundingCard(): ReactElement {
 					<CardTitle>{'$1.5M via ‘Sophon Spark’'}</CardTitle>
 					<div className={'flex flex-col items-start gap-6 pt-4 md:flex-row md:items-end md:gap-8 md:pt-0'}>
 						<CardDescription>
-							{
-								'In partnership with Cod3x, this initiative will launch a ‘Giga Swarm’ of productive AI agents on Sophon.'
-							}
+							{'In partnership with Cod3x, this initiative will launch a '}
+							<b>{'‘Giga Swarm’'}</b>
+							{' of productive AI agents on Sophon.'}
 						</CardDescription>
 						<Link
 							href={'https://blog.sophon.xyz/'}

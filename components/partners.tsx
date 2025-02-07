@@ -1,9 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import {Fragment} from 'react';
 
 import {cn} from '@/lib/utils';
 
-import type {ReactElement} from 'react';
+import type {ReactElement, ReactNode} from 'react';
 
 function ArrowIcon(): ReactElement {
 	return (
@@ -98,7 +99,7 @@ function PartnerCardBig(props: {logoURI: string; href: string}): ReactElement {
 	);
 }
 
-function PartnerCardSmall(props: {title: string; description: string; logoURI: string; href: string}): ReactElement {
+function PartnerCardSmall(props: {title: string; description: ReactNode; logoURI: string; href: string}): ReactElement {
 	const {title, description, logoURI, href} = props;
 
 	return (
@@ -160,7 +161,13 @@ export default function Partners(): ReactElement {
 							href={'https://x.com/anomalygamesinc'}
 							logoURI={'/partners/anomaly.png'}
 							description={
-								'The creators of Nova — an Agentic World Builder that drives AI-powered gaming, trading, and social ecosystems. Leveraging AI to redefine AI-driven storytelling and interactive gameplay.'
+								<Fragment>
+									{'The creators of '}
+									<b>{'Nova'}</b>
+									{
+										' — an Agentic World Builder that drives AI-powered gaming, trading, and social ecosystems. Leveraging AI to redefine AI-driven storytelling and interactive gameplay.'
+									}
+								</Fragment>
 							}
 						/>
 						<PartnerCardSmall

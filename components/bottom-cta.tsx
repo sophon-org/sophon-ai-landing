@@ -41,9 +41,9 @@ export default function BottomCTA(): ReactElement {
 							'md:text-[24px] md:leading-[24px]',
 							'text-[16px] leading-[18px]'
 						)}>
-						{
-							'As more curated products roll out in Q1 2025 and beyond, expect the agentic economy on Sophon to grow in ways few other chains can match.'
-						}
+						{'As more curated products roll out in Q1 2025 and beyond, expect the '}
+						<b>{'agentic economy'}</b>
+						{' on Sophon to grow in ways few other chains can match.'}
 					</p>
 					<p
 						className={cn(
