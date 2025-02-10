@@ -71,7 +71,7 @@ export default function BottomCTA(): ReactElement {
 						<Link
 							href={'https://t.me/DeFiBrum'}
 							target={'_blank'}>
-							<button className={'button-regular min-w-[240px]'}>{'Chat on Telegram'}</button>
+							<button className={'button-regular min-w-[240px]'}>{'Chat with the team'}</button>
 						</Link>
 					</div>
 				</div>

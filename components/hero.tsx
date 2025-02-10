@@ -45,7 +45,7 @@ export default function Hero(): ReactElement {
 						href={'https://t.me/DeFiBrum'}
 						target={'_blank'}
 						className={'flex max-md:w-full'}>
-						<button className={'button-regular w-full'}>{'Chat on Telegram'}</button>
+						<button className={'button-regular w-full'}>{'Chat with the team'}</button>
 					</Link>
 					<Link
 						href={'https://blog.sophon.xyz/ai-agent-initiative/'}

@@ -22,8 +22,9 @@ const altehaasGrotesk = localFont({
 });
 
 export const metadata: Metadata = {
-	title: 'Sophon AI Agents',
-	description: 'Sophon AI Agents'
+	title: 'Sophon Intelligence Agency',
+	description:
+		"Sophon's $5M initiative powering the next wave of AI agents onchain - bringing together elite teams, proven infrastructure, and substantial resources to build out a productive economy of interconnected AI agents."
 };
 
 export default function RootLayout({
