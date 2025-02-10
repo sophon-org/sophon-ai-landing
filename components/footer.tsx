@@ -127,7 +127,7 @@ export default function Footer(): ReactElement {
 			<div className={'mx-auto mt-8 max-w-[1200px] md:mt-16'}>
 				<hr className={'w-full border-[#E1E5E5]'} />
 				<div className={'flex justify-between pb-10 pt-6 text-[12px]'}>
-					<p className={'text-black/40'}>{'© 2024 Sophon.'}</p>
+					<p className={'text-black/40'}>{`© ${new Date().getFullYear()} Sophon.`}</p>
 					<div className={'flex gap-x-12'}>
 						<a
 							className={'leading-none text-black/40 hover:text-black'}

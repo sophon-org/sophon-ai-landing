@@ -41,9 +41,14 @@ export default function Hero(): ReactElement {
 					}
 				</p>
 				<div className={'flex flex-col justify-center gap-4 md:flex-row'}>
-					<button className={'button-regular'}>{'Chat on Telegram'}</button>
 					<Link
-						href={'https://blog.sophon.xyz/'}
+						href={'https://t.me/DeFiBrum'}
+						target={'_blank'}
+						className={'flex max-md:w-full'}>
+						<button className={'button-regular'}>{'Chat on Telegram'}</button>
+					</Link>
+					<Link
+						href={'https://blog.sophon.xyz/ai-agent-initiative/'}
 						target={'_blank'}
 						className={'flex max-md:w-full'}>
 						<button className={'button-glass w-full'}>{'Learn more'}</button>
