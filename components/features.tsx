@@ -9,7 +9,7 @@ function CardTitle(props: {children: ReactNode}): ReactElement {
 	return (
 		<h3
 			className={cn(
-				'font-bold tracking-[-0.06em] text-black',
+				'font-bold tracking-[-0.06em] text-white',
 				'md:text-[36px] md:leading-[36px]',
 				'text-[24px] leading-[24px]'
 			)}>
@@ -22,7 +22,7 @@ function CardDescription(props: {children: ReactNode}): ReactElement {
 	return (
 		<p
 			className={cn(
-				'mt-0 md:mt-4 text-black/20',
+				'mt-0 md:mt-4 text-white',
 				'md:text-[20px] md:leading-[24px] md:tracking-[-0.02rem]',
 				'text-[14px] leading-[18px] tracking-[-0.03rem]'
 			)}>
@@ -37,39 +37,45 @@ function FundingCard(): ReactElement {
 			href={'https://blog.sophon.xyz/'}
 			target={'_blank'}
 			className={cn(
-				'relative col-span-1 row-span-2 h-[360px] overflow-hidden rounded-3xl md:aspect-[592/640] md:h-auto',
+				'relative col-span-1 row-span-2 h-[360px] overflow-hidden rounded-3xl md:h-full',
 				'bg-grey hover:bg-gradient-to-b from-[#F9FBFB] to-[#EDF6FB] transition-colors'
 			)}>
-			<div className={'absolute inset-y-[40px] right-[-72px] md:right-[-288px] md:top-[-120px]'}>
+			<div className={'absolute inset-0'}>
 				<Image
-					src={'/featureCircle.png'}
+					src={'/feature-spark.jpg'}
 					alt={'Funding'}
 					width={720}
 					height={720}
-					className={'size-[280px] object-contain md:size-full'}
+					className={'object-cover md:size-full'}
 				/>
 			</div>
 
 			<div
 				className={cn(
-					'mb-6 w-fit rounded-[80px] bg-black/5 px-3 py-2 opacity-30 backdrop-blur-2xl',
+					'mb-6 w-fit rounded-[80px] bg-white/10 px-3 py-2 opacity-30 backdrop-blur-2xl',
 					'absolute top-6 right-6 md:hidden'
 				)}>
-				<p className={cn('font-bold text-black text-[12px] leading-[16px] tracking-[-0.02em] uppercase')}>
+				<p className={cn('font-bold text-white text-[12px] leading-[16px] tracking-[-0.02em] uppercase')}>
 					{'Coming soon'}
 				</p>
 			</div>
 
 			<div className={'relative z-10 mt-auto flex h-full flex-col justify-end'}>
-				<div className={'bg-white/20 p-6 backdrop-blur-2xl md:p-10'}>
+				<div
+					style={{
+						background:
+							'linear-gradient(180deg, rgba(82, 163, 229, 0.01) 0%, rgba(82, 163, 229, 0.5) 100%)',
+						backdropFilter: 'blur(32px)'
+					}}
+					className={'p-6 md:p-10'}>
 					<div
 						className={cn(
-							'mb-6 w-fit rounded-[80px] bg-black/5 px-3 py-2 opacity-30 backdrop-blur-2xl',
+							'mb-6 w-fit rounded-[80px] bg-white/10 px-3 py-2 backdrop-blur-2xl',
 							'hidden md:block'
 						)}>
 						<p
 							className={cn(
-								'font-bold text-black text-[12px] leading-[16px] tracking-[-0.02em] uppercase'
+								'font-bold text-white text-[12px] leading-[16px] tracking-[-0.02em] uppercase'
 							)}>
 							{'Coming soon'}
 						</p>
@@ -99,7 +105,16 @@ function GPUCreditsCard(): ReactElement {
 			className={
 				'relative col-span-1 row-span-1 h-[200px] rounded-3xl bg-grey p-6 md:aspect-auto md:h-auto md:p-10'
 			}>
-			<div className={'mt-auto flex h-full flex-col justify-between'}>
+			<div className={'absolute inset-0 z-10 overflow-hidden rounded-3xl'}>
+				<Image
+					src={'/feature-aethir.jpg'}
+					alt={'Funding'}
+					width={592}
+					height={312}
+					className={'size-full object-cover'}
+				/>
+			</div>
+			<div className={'relative z-20 mt-auto flex h-full flex-col justify-between'}>
 				<CardTitle>{'$1M in Aethir Compute Grants'}</CardTitle>
 				<CardDescription>
 					{
@@ -117,7 +132,16 @@ function SupportCard(): ReactElement {
 			className={
 				'relative col-span-1 row-span-1 h-[200px] rounded-3xl bg-grey p-6 md:aspect-auto md:h-auto md:p-10'
 			}>
-			<div className={'mt-auto flex h-full flex-col justify-between'}>
+			<div className={'absolute inset-0 z-10 overflow-hidden rounded-3xl'}>
+				<Image
+					src={'/feature-gtm.jpg'}
+					alt={'Funding'}
+					width={592}
+					height={312}
+					className={'size-full object-cover'}
+				/>
+			</div>
+			<div className={'relative z-20 mt-auto flex h-full flex-col justify-between'}>
 				<CardTitle>{'Funding, Go-To-Market & Technical Support'}</CardTitle>
 				<CardDescription>
 					{
@@ -147,6 +171,69 @@ export default function Features(): ReactElement {
 					<GPUCreditsCard />
 
 					<SupportCard />
+				</div>
+				<div
+					className={
+						'relative mt-4 w-full overflow-hidden rounded-3xl bg-[#5095CC] md:aspect-[1200/640] md:h-auto'
+					}>
+					<div className={'relative z-10 grid size-full grid-cols-12'}>
+						<div className={'relative col-span-12 h-[482px] md:col-span-8 md:h-auto'}>
+							<div
+								style={{boxShadow: '0px 0px 100px 80px #FFFFFF1A inset'}}
+								className={
+									'relative z-20 col-span-8 flex h-full flex-col bg-white/10 px-10 py-14 backdrop-blur-3xl min-[1000px]:pr-[200px]'
+								}>
+								<p
+									className={cn(
+										'font-bold tracking-[-0.05em] text-white',
+										// 'md:text-[32px] md:leading-[28px]',
+										'min-[1000px]:text-[32px] min-[1000px]:leading-[28px]',
+										'text-[24px] leading-[24px]'
+									)}>
+									{
+										"While many talk about AI's potential when combined with blockchain, we're focused on making it practical, accessible, and immediately valuable for users."
+									}
+								</p>
+								<div className={'mt-auto flex flex-col gap-10'}>
+									<Image
+										src={'/logo.png'}
+										alt={'SIA'}
+										width={120}
+										height={56}
+										className={'h-[56px] w-[120px] mix-blend-luminosity'}
+									/>
+									<p
+										className={cn(
+											'text-white',
+											'md:text-[20px] md:leading-[20px] md:tracking-[-0.02em]',
+											'text-[14px] leading-[18px] tracking-[-0.03em]'
+										)}>
+										{
+											'The SIA brings together elite teams, proven infrastructure, and substantial resources to make this vision real.'
+										}
+									</p>
+								</div>
+							</div>
+						</div>
+						<div className={'col-span-12 block aspect-square w-full md:hidden'}>
+							<video
+								src={'/sia-video.webm'}
+								className={'size-full object-cover'}
+								autoPlay
+								muted
+								loop
+							/>
+						</div>
+					</div>
+					<div className={'absolute inset-0 hidden md:block'}>
+						<video
+							src={'/sia-video.webm'}
+							className={'size-full object-cover'}
+							autoPlay
+							muted
+							loop
+						/>
+					</div>
 				</div>
 			</div>
 		</section>

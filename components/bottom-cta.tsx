@@ -2,6 +2,8 @@ import Link from 'next/link';
 
 import {cn} from '@/lib/utils';
 
+import {CrossShape} from './crossShape';
+
 import type {ReactElement} from 'react';
 
 export default function BottomCTA(): ReactElement {
@@ -10,14 +12,20 @@ export default function BottomCTA(): ReactElement {
 			<div
 				className={cn(
 					'relative flex items-center justify-center overflow-hidden rounded-3xl md:rounded-[32px] text-white',
-					'max-sm:aspect-[359/560] md:w-full md:max-w-[1200px] md:min-h-[683px] h-auto'
+					'md:w-full md:max-w-[1200px] md:min-h-[683px] h-auto py-20 md:py-0'
 				)}>
 				<div
 					className={cn(
-						'absolute inset-0 bg-cover bg-center',
+						'absolute inset-0 bg-cover bg-center pointer-events-none',
 						'bg-[url("/banner-mobile.jpg")] md:bg-[url("/banner.jpg")]'
 					)}
 				/>
+				<div className={'pointer-events-none absolute left-10 top-10 hidden md:block'}>
+					<CrossShape />
+				</div>
+				<div className={'pointer-events-none absolute right-10 top-10 hidden md:block'}>
+					<CrossShape />
+				</div>
 				<div className={'relative z-10 p-4 text-center'}>
 					<h2
 						className={cn(
