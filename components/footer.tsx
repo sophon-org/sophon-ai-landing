@@ -132,13 +132,13 @@ export default function Footer(): ReactElement {
 						<a
 							className={'leading-none text-black/40 hover:text-black'}
 							target={'_blank'}
-							href={'/privacypolicy'}>
+							href={'https://sophon.xyz/privacypolicy'}>
 							{'Privacy'}
 						</a>
 						<a
 							className={'leading-none text-black/40 hover:text-black'}
 							target={'_blank'}
-							href={'/terms'}>
+							href={'https://sophon.xyz/terms'}>
 							{'Terms'}
 						</a>
 					</div>

@@ -44,16 +44,16 @@ function FundingCard(): ReactElement {
 				<Image
 					src={'/feature-spark.jpg'}
 					alt={'Funding'}
-					width={720}
-					height={720}
+					width={1184}
+					height={1280}
 					className={'object-cover md:size-full'}
 				/>
 			</div>
 
 			<div
 				className={cn(
-					'mb-6 w-fit rounded-[80px] bg-white/10 px-3 py-2 opacity-30 backdrop-blur-2xl',
-					'absolute top-6 right-6 md:hidden'
+					'mb-6 w-fit rounded-[80px] px-3 py-2 backdrop-blur-2xl bg-[#52A3E51A]',
+					'absolute top-6 right-6 md:hidden z-40'
 				)}>
 				<p className={cn('font-bold text-white text-[12px] leading-[16px] tracking-[-0.02em] uppercase')}>
 					{'Coming soon'}
@@ -174,19 +174,19 @@ export default function Features(): ReactElement {
 				</div>
 				<div
 					className={
-						'relative mt-4 w-full overflow-hidden rounded-3xl bg-[#5095CC] md:aspect-[1200/640] md:h-auto'
+						'relative mt-4 aspect-[327/808] max-h-[808px] w-full overflow-hidden rounded-3xl bg-[#5095CC] md:aspect-[1200/640] md:h-auto md:max-h-full'
 					}>
-					<div className={'relative z-10 grid size-full grid-cols-12'}>
-						<div className={'relative col-span-12 h-[482px] md:col-span-8 md:h-auto'}>
+					<div className={'relative z-10 grid size-full h-3/5 grid-cols-12 md:h-full '}>
+						<div className={'relative col-span-12 h-full md:col-span-8 md:h-auto'}>
 							<div
 								style={{boxShadow: '0px 0px 100px 80px #FFFFFF1A inset'}}
-								className={
-									'relative z-20 col-span-8 flex h-full flex-col bg-white/10 px-10 py-14 backdrop-blur-3xl min-[1000px]:pr-[200px]'
-								}>
+								className={cn(
+									'relative z-20 col-span-8 flex h-full flex-col bg-white/10 backdrop-blur-3xl min-[1000px]:pr-[200px]',
+									'p-6 md:px-10 md:py-14'
+								)}>
 								<p
 									className={cn(
 										'font-bold tracking-[-0.05em] text-white',
-										// 'md:text-[32px] md:leading-[28px]',
 										'min-[1000px]:text-[32px] min-[1000px]:leading-[28px]',
 										'text-[24px] leading-[24px]'
 									)}>
@@ -215,19 +215,28 @@ export default function Features(): ReactElement {
 								</div>
 							</div>
 						</div>
-						<div className={'col-span-12 block aspect-square w-full md:hidden'}>
-							<video
-								src={'/sia-video.webm'}
-								className={'size-full object-cover'}
-								autoPlay
-								muted
-								loop
-							/>
-						</div>
 					</div>
-					<div className={'absolute inset-0 hidden md:block'}>
+					<div className={'pointer-events-none absolute inset-0 hidden md:block'}>
 						<video
 							src={'/sia-video.webm'}
+							poster={'/poster-desktop.jpg'}
+							className={'size-full object-cover'}
+							autoPlay
+							muted
+							loop
+						/>
+					</div>
+					<div
+						className={cn(
+							'pointer-events-none absolute inset-[-2px] block md:hidden',
+							'min-[700px]:top-[-60%]',
+							'min-[600px]:top-[-45%]',
+							'min-[500px]:top-[-30%]',
+							'min-[400px]:top-[-15%]'
+						)}>
+						<video
+							src={'/sla-video-mobile.webm'}
+							poster={'/poster-mobile.jpg'}
 							className={'size-full object-cover'}
 							autoPlay
 							muted

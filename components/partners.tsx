@@ -55,7 +55,7 @@ function PartnerCardBig(props: {logoURI: string; href: string}): ReactElement {
 				'group transition-colors',
 				'space-y-4 rounded-3xl p-6 flex flex-col',
 				'bg-grey hover:bg-gradient-to-b from-[#F9FBFB] to-[#EDF6FB]',
-				'aspect-[327/360] w-full md:w-[440px] md:min-w-[440px] md:aspect-auto'
+				'aspect-[327/360] w-full md:w-full md:min-w-[440px] md:aspect-auto'
 			)}>
 			<div className={'flex h-full justify-end'}>
 				<div className={'flex size-[120px] items-center justify-center rounded-[24px]'}>
@@ -150,7 +150,7 @@ export default function Partners(): ReactElement {
 					)}>
 					{'A Growing AI Ecosystem.'}
 				</h2>
-				<div className={'flex flex-col gap-4 pt-10 md:pt-[49px] lg:flex-row'}>
+				<div className={'md:pt-[49px flex flex-col gap-4 pt-10 lg:flex-row'}>
 					<PartnerCardBig
 						logoURI={'/partners/codex.png'}
 						href={'https://x.com/Cod3xOrg'}
