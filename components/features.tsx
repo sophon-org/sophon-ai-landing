@@ -81,7 +81,11 @@ function FundingCard(): ReactElement {
 							<b>{'‘Giga Swarm’'}</b>
 							{' of productive AI agents on Sophon.'}
 						</CardDescription>
-						<button className={'button-regular whitespace-nowrap'}>{'Read more'}</button>
+						<Link
+							href={'https://blog.sophon.xyz/ai-agent-initiative/'}
+							target={'_blank'}>
+							<button className={'button-regular whitespace-nowrap'}>{'Read more'}</button>
+						</Link>
 					</div>
 				</div>
 			</div>
@@ -96,7 +100,7 @@ function GPUCreditsCard(): ReactElement {
 				'relative col-span-1 row-span-1 h-[200px] rounded-3xl bg-grey p-6 md:aspect-auto md:h-auto md:p-10'
 			}>
 			<div className={'mt-auto flex h-full flex-col justify-between'}>
-				<CardTitle>{'Aethir Compute Grants'}</CardTitle>
+				<CardTitle>{'$1M in Aethir Compute Grants'}</CardTitle>
 				<CardDescription>
 					{
 						'Through our partnership with Aethir, the leading decentralized compute provider, approved projects receive compute grants from Aethir’s $100M ecosystem fund – helping offset model training and execution costs.'
@@ -114,7 +118,7 @@ function SupportCard(): ReactElement {
 				'relative col-span-1 row-span-1 h-[200px] rounded-3xl bg-grey p-6 md:aspect-auto md:h-auto md:p-10'
 			}>
 			<div className={'mt-auto flex h-full flex-col justify-between'}>
-				<CardTitle>{'Go-To-Market & Technical Support'}</CardTitle>
+				<CardTitle>{'Funding, Go-To-Market & Technical Support'}</CardTitle>
 				<CardDescription>
 					{
 						'Teams building on Sophon gain access to strategic guidance, partnerships, and integration support to accelerate adoption.'
@@ -135,7 +139,7 @@ export default function Features(): ReactElement {
 						'md:text-[76px] md:leading-[76px]',
 						'text-[40px] leading-[38px]'
 					)}>
-					{'Supporting AI Agent Adoption.'}
+					{'$5M to Support AI Agent Adoption.'}
 				</h2>
 				<div className={'mt-10 grid grid-cols-1 gap-4 md:mt-12 md:grid-cols-2'}>
 					<FundingCard />

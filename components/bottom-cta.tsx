@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import {cn} from '@/lib/utils';
 
 import type {ReactElement} from 'react';
@@ -58,7 +60,11 @@ export default function BottomCTA(): ReactElement {
 						}
 					</p>
 					<div className={'flex items-center justify-center pt-10'}>
-						<button className={'button-regular min-w-[240px]'}>{'Apply now'}</button>
+						<Link
+							href={'https://t.me/DeFiBrum'}
+							target={'_blank'}>
+							<button className={'button-regular min-w-[240px]'}>{'Chat on Telegram'}</button>
+						</Link>
 					</div>
 				</div>
 			</div>
